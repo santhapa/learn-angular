@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/angular.min.js"></script>
+</head>
+
+<body>
+	<!-- Angular JS Controller -->
+	<h2>Angular Js <i>Using Tables</i></h2>
+
+	<div ng-app="myapp" ng-controller="itemController">
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Location</th>
+			</tr>
+			<tr ng-repeat="brand in brands">
+				<td>{{ brand.name }}</td>
+				<td> {{ brand.location }} </td>
+			</tr>
+		</table>
+    </div>
+
+    <script>
+    	angular.module("myapp", [])
+    	.controller('itemController', function($scope){
+    		$scope.brands = [	{name: "Jbl", location: 'USA'},
+    							{name: "Beats", location: 'USA'},	 
+    							{name: "Audio Technica", location: 'UK'},
+    							{name: "Behringer", location: 'China'},
+    						];
+    	});
+    </script>
+
+</body>
+</html>
+

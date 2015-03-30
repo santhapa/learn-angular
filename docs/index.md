@@ -9,3 +9,4 @@ Combining tutorial from [W3Schools](http://www.w3schools.com/angular/) and [Tuto
 
 [Hello World Example](hello-world-example.md)
 
+[Filters](filters.md)

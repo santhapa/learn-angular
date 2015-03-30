@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/angular.min.js"></script>
+</head>
+
+<body>
+	<!-- Angular JS Controller -->
+	<h2>Angular Js <i>Useful Attributes</i></h2>
+
+	<div ng-app="">
+		<h4><i>ng-disabled</i></h4>
+		<!-- ng-disabled attribute to an HTML button and pass it a model. Bind the model to a checkbox and see the variation -->
+		<input type="checkbox" ng-model="enableDisableButton">Disable Button
+		<button ng-disabled="enableDisableButton">Click Me!</button>
+
+		<h4><i>ng-show</i></h4>
+		<!-- ng-show attribute to an HTML button and pass it a model. Bind the model to a checkbox and see the variation. -->
+		<input type="checkbox" ng-model="showHide1">Show Button
+		<button ng-show="showHide1">Click Me!</button>
+
+		<h4><i>ng-hide</i></h4>
+		<!-- ng-hide attribute to an HTML button and pass it a model. Bind the model to a checkbox and see the variation. -->
+		<input type="checkbox" ng-model="showHide2">Hide Button
+		<button ng-hide="showHide2">Click Me!</button>
+
+		<h4><i>ng-click</i></h4>
+		<!-- ng-click attribute to an HTML button and update a model. Bind the model to HTML and see the variation. -->
+		<p>
+			Total click: {{ clickCounter }}
+			<button ng-click="clickCounter = clickCounter + 1">Click Me!</button>
+		</p>
+    </div>
+
+</body>
+</html>
+
