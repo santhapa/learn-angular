@@ -1,11 +1,11 @@
 ## Angular Js Directives
 
 AngularJS directives are used to extend HTML. They are special attributes starting with ng-prefix. 
-**ng-app** - starts an AngularJS Application.
-**ng-init** - initializes application data.
-**ng-model** - defines the model that is variable to be used in AngularJS.
-**ng-bind** - binds the angular ng-model data to Html element.
-**ng-repeat** - repeats HTML elements for each item in a collection (basically for array iteration).
+- **ng-app** - starts an AngularJS Application.
+- **ng-init** - initializes application data.
+- **ng-model** - defines the model that is variable to be used in AngularJS.
+- **ng-bind** - binds the angular ng-model data to Html element.
+- **ng-repeat** - repeats HTML elements for each item in a collection (basically for array iteration).
 
 ### ng-app directive
 The ng-app directive starts an AngularJS Application. It defines the root element. It automatically initializes or bootstraps the application when the web page containing AngularJS Application is loaded. It is also used to load various AngularJS modules in AngularJS Application.
