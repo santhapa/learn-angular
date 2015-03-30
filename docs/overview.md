@@ -75,3 +75,5 @@ The AngularJS framework can be divided into following three major parts:
 2. ng-model : This directive binds the values of AngularJS application data to HTML input controls.
 
 3. ng-bind : This directive binds the AngularJS Application data to HTML tags.
+
+[Back to Index](index.md)

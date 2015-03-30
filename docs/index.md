@@ -5,5 +5,7 @@ Combining tutorial from [W3Schools](http://www.w3schools.com/angular/) and [Tuto
 
 [Introduction to Angular JS](overview.md)
 
+[Directives](directives.md)
+
 [Hello World Example](hello-world-example.md)
 
