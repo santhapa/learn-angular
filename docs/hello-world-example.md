@@ -29,7 +29,7 @@
 ## Include AngularJS
 We have included the AngularJS JavaScript file in the HTML page so we can use AngularJS:
 
-```
+```html
 <head>
    <script src="js/angular.min.js"></script>
 </head>
@@ -40,7 +40,7 @@ Check the latest version of AngularJS on their official website.
 
 Next we tell what part of the HTML contains the AngularJS app. This done by adding the ng-app attribute to the root HTML element of the AngularJS app. You can either add it to html element or body element as shown below:
 
-```
+```html
 <body ng-app="myapp">
 </body>
 ```
@@ -49,7 +49,7 @@ Next we tell what part of the HTML contains the AngularJS app. This done by addi
 
 The view is this part:
 
-```
+```html
 <div ng-controller="HelloController" >
    <h2>Hello {{ world }}</h2>
 </div>
@@ -60,7 +60,7 @@ ng-controller tells AngularJS what controller to use with this view. helloTo.tit
 
 The controller part is:
 
-```
+```js
 <script>
    angular.module("myapp", [])
    .controller("HelloController", function($scope) {
@@ -73,4 +73,4 @@ This code registers a controller function named HelloController in the angular m
 
 The $scope parameter passed to the controller function is the model. The controller function adds a helloTo JavaScript object, and in that object it adds a title field.
 
-** Refer `hello-world.html` **
+**Refer `hello-world.html`**
