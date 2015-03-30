@@ -73,6 +73,6 @@ This code registers a controller function named HelloController in the angular m
 
 The $scope parameter passed to the controller function is the model. The controller function adds a helloTo JavaScript object, and in that object it adds a title field.
 
-**Refer `hello-world.html`**
+**Refer [hello-world.html](../hello-world.html)**
 
 [Back to Index](index.md)

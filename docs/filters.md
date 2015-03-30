@@ -16,6 +16,5 @@ Filters are used to modify the data. They can be clubbed in expression or direct
 	<li ng-repeat="brand in brands |orderBy:'name'">
 ```
 
-**Refer `filters.html`**
-[Go here!](../filters.html)
+**Refer [filters.html](../filters.html)**
 [Back to Index](index.md)

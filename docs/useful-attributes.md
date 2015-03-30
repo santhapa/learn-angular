@@ -7,6 +7,6 @@ The following directives are used to bind application data to attributes of HTML
 - **ng-hide** :Hides a given control.
 - **ng-click** :Represents a AngularJS click event.
 
-**Refer `useful-attr.html`**
+**Refer [useful_attr.html](../useful_attr.html)**
 
 [Back to Index](index.md)
