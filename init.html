@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/angular.min.js"></script>
+</head>
+
+<body>
+	<h2>Angular JS <i>ng-init</i> Examples</h2>
+	<div ng-app="">
+		<!-- Single Variable initialization -->
+		<h3>Single Variable Initialization</h3>
+		<div ng-init="name='Kancha'">
+			<input type="text" ng-model="name">
+			<p>Hello, <span ng-bind="name"></span></p>
+		</div>
+		<!-- Initialization of array variable -->
+		<h3>Array initiaization</h3>
+		<div ng-init="names=['Kancha', 'Maila', 'Bhunte', 'Harke']">
+			<ul>
+				<li ng-repeat="name in names">
+					<span ng-bind="name"></span>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Object variable initialization  -->
+		<h3>Object Initialization</h3>
+		<div 
+			ng-init="persons=[
+						{name:'Kancha', age: '20', sex:'Male'},
+						{name:'Kanchi', age: '18', sex:'Female'},
+						{name:'Maila', age: '20', sex:'Male'},
+						{name:'Maili', age: '22', sex:'Female'}
+					]">
+			<ul>
+				<li ng-repeat="person in persons">
+					Name: <span ng-bind="person.name"></span>&emsp;
+					Age: <span ng-bind="person.age"></span>&emsp;
+					Sex: <span ng-bind="person.sex"></span>
+				</li>
+			</ul>
+		</div>
+				
+	</div>
+</body>
+</html>

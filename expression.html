@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/angular.min.js"></script>
+</head>
+
+<body>
+	<h2>Angular JS <i>Expression</i> Examples</h2>
+	<div ng-app="">
+		<div 
+			ng-init="persons=[
+						{firstName:'Kancha', lastName:'Lama', age: '20', sex:'Male'},
+						{firstName:'Kanchi', lastName:'Rai', age: '18', sex:'Female'},
+						{firstName:'Maila', lastName:'Shrestha', age: '20', sex:'Male'},
+						{firstName:'Maili', lastName:'Manandhar', age: '22', sex:'Female'}
+					]">
+			<ul>
+				<li ng-repeat="person in persons">
+					Name: <span> {{ person.firstName + " " + person.lastName }} </span>&emsp;
+					Age (Multiply by 100): <span> {{ person.age * 100 }} </span>&emsp;
+					Sex: <span> {{ person.sex }} </span>
+				</li>
+			</ul>
+		</div>
+				
+	</div>
+</body>
+</html>
