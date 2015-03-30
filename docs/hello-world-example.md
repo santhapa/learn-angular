@@ -2,26 +2,28 @@
 
 ## Code
 
-```
+```html
 <!doctype html>
 <html>
-   	<head>
-      	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
-   	</head>
-   	<body ng-app="myapp">
-      	<div ng-controller="HelloController" >
-         	<h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
-      	</div>
-      	<script>
-         	angular.module("myapp", [])
-         		.controller("HelloController", function($scope) {
-            	$scope.helloTo = {};
-            	$scope.helloTo.title = "AngularJS";
-         	});
-      	</script>
-   	</body>
-</html>
+<head>
+   <script src="js/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+   <h2>Angular Js <i>Hello World</i></h2>
+   
+   <div ng-controller="HelloController" >
+        <h2>Hello {{ world }}</h2>
+   </div>
+   <script>
+      angular.module("myapp", [])
+      .controller("HelloController", function($scope) {
+         $scope.world = 'World';
+      });
+   </script>
 
+
+</body>
+</html>
 ```
 
 ## Include AngularJS
@@ -29,7 +31,7 @@ We have included the AngularJS JavaScript file in the HTML page so we can use An
 
 ```
 <head>
-   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+   <script src="js/angular.min.js"></script>
 </head>
 ```
 Check the latest version of AngularJS on their official website.
@@ -49,7 +51,7 @@ The view is this part:
 
 ```
 <div ng-controller="HelloController" >
-   <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+   <h2>Hello {{ world }}</h2>
 </div>
 ```
 ng-controller tells AngularJS what controller to use with this view. helloTo.title tells AngularJS to write the "model" value named helloTo.title to the HTML at this location.
@@ -62,12 +64,13 @@ The controller part is:
 <script>
    angular.module("myapp", [])
    .controller("HelloController", function($scope) {
-      $scope.helloTo = {};
-      $scope.helloTo.title = "AngularJS";
-    });
+      $scope.world = 'World';
+   });
 </script>
 ```
 
 This code registers a controller function named HelloController in the angular module named myapp. The controller function is registered in angular via the angular.module(...).controller(...) function call.
 
 The $scope parameter passed to the controller function is the model. The controller function adds a helloTo JavaScript object, and in that object it adds a title field.
+
+** Refer `hello-world.html` **
