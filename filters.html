@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/angular.min.js"></script>
+</head>
+
+<body>
+	<!-- Angular JS Controller -->
+	<h2>Angular Js <i>Filters</i></h2>
+
+	<div ng-app="myapp" ng-controller="itemController">
+		<input type="text" ng-model="item" placeholder="What are you going to buy">
+		<input type="text" ng-model="price" placeholder="Price in number">
+
+		<p><b>Item:</b> {{ item | uppercase }}&emsp; <span><i>(uppercase filter)</i></span></p>
+		<p><b>Item:</b> {{ item | lowercase }}&emsp; <span><i>(lowercase filter)</i></span></p>
+		<p><b>Price:</b> {{ price | currency }}</p>
+		<div>
+		<p><b>Brands: <i>(Filter By)</i> </b>
+			<select ng-model="brand_filter.name">
+				<option ng-repeat="brand in brands" >{{ brand.name }}</option>
+			</select>
+			<select ng-model="brand_filter.location">
+				<option ng-repeat="brand in brands" >{{ brand.location }}</option>
+			</select>
+		</p>
+		
+		<p>
+			<b>Brands: <i>(Order By)</i></b>
+			<select ng-model="selOrderby">
+				<option value="name">Name</option>
+				<option value="location">Location</option>
+			</select>
+		</p>		
+
+		<ul>
+			<li ng-repeat="brand in brands | filter:brand_filter | orderBy:selOrderby">
+				<b>Company:</b> {{ brand.name }} &emsp; <b>Location:</b> {{ brand.location }}
+			</li>
+		</ul>
+		
+		</div>
+    </div>
+
+    <script>
+    	angular.module("myapp", [])
+    	.controller('itemController', function($scope){
+    		$scope.item ="Headphone";
+    		$scope.brands = [	{name: "Jbl", location: 'USA'},
+    							{name: "Beats", location: 'USA'},	 
+    							{name: "Audio Technica", location: 'UK'},
+    							{name: "Behringer", location: 'China'},
+    						];
+    		$scope.price = 1000;
+    	});
+    </script>
+
+</body>
+</html>
+
