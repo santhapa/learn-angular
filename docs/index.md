@@ -11,4 +11,4 @@ Combining tutorial from [W3Schools](http://www.w3schools.com/angular/) and [Tuto
 
 [Filters](filters.md)
 
-[DOM Manipulating Attributes](useful-attr.md)
+[DOM Manipulating Attributes](useful-attributes.md)
