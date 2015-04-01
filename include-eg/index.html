@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+   <script src="../js/angular.min.js"></script>
+</head>
+<body>
+   <!-- Embedding html pages to html -->
+   <h2>Angular Js <i>Include Example</i></h2>
+   
+   <div ng-app="testApp" ng-controller="studentController" >
+      <div ng-include="'info.html'"></div>
+      <div ng-include="'score.html'"></div>
+   </div>
+   <script>
+      angular.module("testApp",[])
+      .controller('studentController', function($scope){
+         $scope.student = {
+            firstName: "Sushil",
+            lastName: "Shrestha",
+            subjects: [
+                  {name: 'Physics', marks: '80'},
+                  {name: 'Chemistry', marks: '80'},
+                  {name: 'Math', marks: '90'},
+                  {name: 'English', marks: '60'},
+                  {name: 'Nepali', marks: '50'},
+                  {name: 'Biology', marks: '95'}
+               ],
+            fullName: function() {
+               var studentObject;
+               studentObject = $scope.student;
+               return studentObject.firstName + " " + studentObject.lastName;
+            }
+         };
+      });
+   </script>
+
+
+</body>
+</html>

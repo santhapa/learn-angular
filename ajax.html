@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+   <script src="js/angular.min.js"></script>
+</head>
+<body>
+   <h2>Angular Js <i>Ajax example</i></h2>
+   
+   <div ng-app="myapp" ng-controller="apiController" >
+      <!-- <ul>
+         <li ng-repeat="post in posts">
+            {{ post.title }} &emsp; {{ post.body }}
+         </li>
+      </ul> -->
+      Order By: 
+      <select ng-model="orderby_filter">
+         <option value="title">Title</option>
+         <option value="body">Body</option>
+      </select>
+      Search: <input type="text" ng-model="search.$">
+      <table border="1">
+         <tr>
+            <th>Title</th>
+            <th>Body</th>
+         </tr>
+         <tr ng-repeat="post in posts |orderBy:orderby_filter |filter:search">
+            <td>{{ post.title }}</td>
+            <td> {{ post.body }} </td>
+         </tr>
+      </table>
+   </div>
+   <script>
+      angular.module("myapp", [])
+      .controller("apiController", function($scope, $http) {
+         var url="json/posts.json";
+         $http.get(url).success( function(response) {
+            $scope.posts = response.posts;
+         });
+
+      });
+   </script>
+
+
+</body>
+</html>
